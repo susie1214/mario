@@ -1,0 +1,50 @@
+/* 기본 */
+html,body{height:100%}
+body{margin:0;background:#6fa4ff;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto}
+
+/* HUD */
+#hud{
+  position:fixed;left:12px;top:10px;z-index:30;display:flex;gap:10px;
+  background:rgba(0,0,0,.25);backdrop-filter:blur(4px);padding:6px 10px;border-radius:10px
+}
+.chip{display:flex;align-items:center;gap:6px;color:#fff;font-weight:800;text-shadow:0 2px 3px rgba(0,0,0,.25)}
+.chip img{width:22px;height:22px;image-rendering:pixelated}
+.heart .heart-icon{color:#ff3b3b;font-size:18px;margin-right:2px}
+
+/* 배경(풀스크린) */
+#bg{position:fixed;inset:0;z-index:0}
+#bg .sky{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92}
+
+/* 게임 필드(풀스크린) */
+#game{position:fixed;inset:0;z-index:5;overflow:hidden}
+
+/* 보이지 않는 바닥: 높이 100px(스크립트의 FLOOR 와 짝) */
+#invisible-floor{position:absolute;left:0;bottom:0;width:3200px;height:100px}
+
+/* 컨테이너 */
+#bricks_area,#pipes_area,#coins_area,#stars_area{
+  position:absolute;left:0;top:0;width:3200px;height:100%;z-index:7
+}
+
+/* 캐릭터/오브젝트(세로 위치는 JS가 계산해서 넣음) */
+.mario{position:absolute;left:70px;width:72px;height:72px;z-index:10;image-rendering:pixelated}
+.peach{position:absolute;left:150px;width:68px;z-index:9;image-rendering:pixelated;opacity:.85}
+.goomba{position:absolute;width:54px;height:46px;z-index:8;image-rendering:pixelated}
+.pipe{position:absolute;width:64px;height:84px;z-index:8;image-rendering:pixelated}
+.brick{position:absolute;width:64px;height:64px;image-rendering:pixelated;bottom:100px}
+
+/* 코인/별 애니메이션 */
+#coins_area img,#stars_area img{position:absolute;width:32px;height:32px;image-rendering:pixelated;animation:bob 1.2s ease-in-out infinite}
+#stars_area img{animation-duration:1s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* 오버레이 & 게임오버 */
+#overlay{position:fixed;inset:0;z-index:40;display:flex;align-items:center;justify-content:center}
+.panel{display:flex;flex-direction:column;align-items:center;gap:16px;background:#0e1e45;padding:22px 26px;border-radius:14px;color:#eaf1ff}
+.panel button{padding:10px 16px;border:0;border-radius:10px;background:#ffd34d;color:#111;font-weight:800;cursor:pointer}
+.panel button:hover{filter:brightness(1.06)}
+.fullcover{position:fixed;inset:0;background:url("gameover.jpg") center/cover no-repeat}
+
+/* 피격 무적 깜빡임 */
+.hitblink{animation:blink .2s linear 6}
+@keyframes blink{50%{opacity:.2}}

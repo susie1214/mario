@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build / cache
+dist/
+build/
+.cache/
+
+# Node (툴링 추가 대비)
+node_modules/

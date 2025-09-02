@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>마리오 게임</title>
+  <link rel="stylesheet" href="mycss.css" />
+  <script src="jquery-3.7.1.min.js"></script>
+  <script defer src="myscript.js"></script>
+</head>
+<body>
+  <!-- HUD -->
+  <div id="hud">
+    <div class="chip"><img src="coin.png" alt=""><span id="coin_score">0</span></div>
+    <div class="chip"><img src="star.png" alt=""><span id="star_score">0</span></div>
+    <div class="chip heart"><span class="heart-icon">♥</span><span id="life_num">3</span></div>
+  </div>
+
+  <!-- 배경(풀스크린) -->
+  <div id="bg"><img src="marioback.jpg" class="sky" alt=""></div>
+
+  <!-- 게임 필드(풀스크린) -->
+  <div id="game">
+    <div id="invisible-floor"></div>
+
+    <div id="bricks_area"></div>
+    <div id="pipes_area"></div>
+    <div id="coins_area"></div>
+    <div id="stars_area"></div>
+
+    <!-- 캐릭터/적 -->
+    <img id="mario" class="mario" src="mario.gif" alt="mario">
+    <img id="peachStart" class="peach" src="peach.png" alt="peach">
+    <img id="peachEnd" class="peach" src="peach.png" alt="peach" style="display:none">
+    <img id="goomba1" class="goomba" src="goomba.png" alt="goomba">
+    <img id="goomba2" class="goomba" src="goomba.png" alt="goomba">
+
+    <!-- 골 파이프 -->
+    <img id="goalpipe" class="pipe" src="pipe.png" alt="goal">
+  </div>
+
+  <!-- 오버레이 -->
+  <div id="overlay" style="display:none">
+    <div id="panelGameOver" class="fullcover" style="display:none"></div>
+    <div id="panelClear" class="panel" style="display:none">
+      <h2>STAGE CLEAR!</h2>
+      <button id="btnAgain">PLAY AGAIN</button>
+    </div>
+  </div>
+</body>
+</html>
