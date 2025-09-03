@@ -23,8 +23,6 @@ https://github.com/susie1214/mario
       <h3>프레임워크 & 라이브러리</h3>
       <p>
         <img src="https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=white" />
-        <img src="https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white" />
-        <img src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white" />
       </p>
     </td>
   </tr>
@@ -42,7 +40,6 @@ https://github.com/susie1214/mario
       <p>
         <img src="https://img.shields.io/badge/GitHub%20Pages-222222?logo=githubpages&logoColor=white" />
         <img src="https://img.shields.io/badge/Static%20Web%20Apps-1E90FF?logo=azurestaticwebapps&logoColor=white" />
-        <img src="https://img.shields.io/badge/HTTP%20Server-Python%203.11-3776AB?logo=python&logoColor=white" />
       </p>
     </td>
   </tr>
