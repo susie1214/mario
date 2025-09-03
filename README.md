@@ -104,6 +104,7 @@ https://github.com/susie1214/mario
 - jQuery 3.7.1 (local file)
 
 ## 🗂️ Project Structure
+```
 mario/
 ├─ main.html
 ├─ mycss.css
@@ -115,6 +116,7 @@ mario/
 │ mario.gif marioback.jpg peach.png gameover.jpg
 │ pxfuel.jpg over.png
 └─ README.md
+```
 
 
 ## 🚀 Run Locally
